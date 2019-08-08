@@ -8,6 +8,7 @@ import (
 	"go/parser"
 	"go/token"
 	"go/types"
+	"log"
 	"os"
 	"path/filepath"
 	"strings"
@@ -218,6 +219,7 @@ func (i *Importer) ParseSourceFiles(root string, paths []string) (*types.Package
 	var files []*ast.File
 	fs := token.NewFileSet()
 	for _, p := range paths {
+		log.Printf("Parsing file: %s", p)
 		f, err := parser.ParseFile(fs, p, nil, 0)
 		if err != nil {
 			return nil, err
