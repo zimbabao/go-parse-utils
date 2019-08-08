@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"gopkg.in/src-d/go-parse-utils.v1"
+	"github.com/zimbabao/go-parse-utils"
 )
 
 func TestPackageAST(t *testing.T) {
